@@ -1,0 +1,193 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.zoom-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/premium-photo/deep-space-background-wallpaper_276152-1040.jpg?w=1060');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: zoomIn 20s infinite linear;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 90px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-content {
+    margin-top: 20px;
+    color: #FFF;
+}
+
+.main-content .card {
+	background: transparent;	
+}
+
+.card-footer .groups {
+    width: 100%;
+    border: none; 
+    border-radius: 0px;
+    background: transparent;
+}
+
+.card-footer .groups .btn {
+    background: transparent;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    margin-right: 10px;
+}
+
+.main-content .card-header {
+    padding: 0; 
+    border: none;
+    border-radius: 0;
+}
+
+.main-content .card-body {
+    position: relative;
+    padding: 20px;
+}
+
+.games {
+    border-radius: 0px;
+    font-size: 13px;
+    height: 70px;
+    background: transparent;
+}
+
+.input-group .input-group-text {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: rgba(10, 38, 66, 0.5);
+    color: #FFF;
+    border-right: 2px solid #FFF; 
+    border-radius: 0;
+}
+
+.input-group .input-group-text:last-child {
+    margin-right: 0;
+    border-right: 0px solid #FFF; 
+}
+
+.input-group .input-group-text:disabled {
+	background: rgba(255, 0, 0, 0.5);
+    color: #0a2642;	
+}
+
+.input-group .form-control {
+    border-radius: 0;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#satellite {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png'); 
+    background-size: cover;
+    top: 175px;
+    left: 275px;
+}
+
+.obstacle {
+    position: absolute;
+    background-size: cover;
+}
+
+#loadingMessage {
+    position: fixed;
+    left: 40%;
+    top: 10px;
+    width: auto;
+    padding: 15px;
+    z-index: 9991;
+    background: rgb(255, 255, 255, 0.8);
+    color: #0a2642;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);    
+    display: none;
+}
+
+.score {
+	position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

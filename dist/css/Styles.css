@@ -1,0 +1,398 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.zoom-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/premium-photo/deep-space-background-wallpaper_276152-1040.jpg?w=1060');
+    background-size: cover;
+    background-position: center;		
+    z-index: -1;
+    animation: zoomIn 20s infinite linear, moveBackground 20s infinite linear;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(2);
+    }
+    20% {
+        transform: scale(1.8);
+    }
+    40% {
+        transform: scale(1.6);
+    }
+    60% {
+        transform: scale(1.4);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center;
+    }
+    20% {
+        background-position: top left;
+    }
+    40% {
+        background-position: top right;
+    }
+    60% {
+        background-position: bottom right;
+    }
+    80% {
+        background-position: bottom left;
+    }
+    100% {
+        background-position: center;
+    }
+}
+
+.main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    animation: zoom 16s alternate infinite; 
+    box-shadow: -42vw -4vh 0px 0px #fff, 
+                25vw -41vh 0px 0px #fff, 
+                -20vw 49vh 0px 1px #581845, 
+                5vw 40vh 1px 1px #581845, 
+                29vw 19vh 1px 0px #F0FF03, 
+                -44vw -13vh 0px 0px #F0FF03, 
+                46vw 41vh 0px 1px #fff, 
+                -3vw -45vh 0px 1px #fff, 
+                47vw 35vh 1px 0px #581845, 
+                12vw -8vh 1px 0px #581845, 
+                -34vw 48vh 1px 1px #F0FF03, 
+                32vw 26vh 1px 1px #F0FF03, 
+                32vw -41vh 1px 1px #fff, 
+                0vw 37vh 1px 1px #fff, 
+                34vw -26vh 1px 0px #581845, 
+                -14vw -49vh 1px 0px #581845, 
+                -12vw 45vh 0px 1px #F0FF03, 
+                -44vw -33vh 0px 1px #F0FF03, 
+                -13vw 41vh 0px 0px #fff, 
+                -36vw -11vh 0px 1px #fff, 
+                -23vw -24vh 1px 0px #581845, 
+                -38vw -27vh 0px 1px #581845, 
+                16vw -19vh 0px 0px #F0FF03, 
+                28vw 33vh 1px 0px #F0FF03, 
+                -49vw -4vh 0px 0px #fff, 
+                16vw 32vh 0px 1px #fff, 
+                36vw -18vh 1px 0px #581845, 
+                -25vw -30vh 1px 0px #581845, 
+                -23vw 24vh 0px 1px #F0FF03, 
+                -2vw -35vh 1px 1px #F0FF03, 
+                -25vw 9vh 0px 0px #fff, 
+                -15vw -34vh 0px 0px #fff, 
+                -8vw -19vh 1px 0px #581845, 
+                -20vw -20vh 1px 1px #581845, 
+                42vw 50vh 0px 1px #F0FF03, 
+                -32vw 10vh 1px 0px #F0FF03, 
+                -23vw -17vh 0px 0px #fff, 
+                44vw 15vh 1px 0px #fff, 
+                -40vw 33vh 1px 1px #581845, 
+                -43vw 8vh 0px 0px #581845, 
+                -48vw -15vh 1px 1px #F0FF03, 
+                -24vw 17vh 0px 0px #F0FF03, 
+                -31vw 50vh 1px 0px #fff, 
+                36vw -38vh 0px 1px #fff, 
+                -7vw 48vh 0px 0px #581845, 
+                15vw -32vh 0px 0px #581845, 
+                29vw -41vh 0px 0px #F0FF03, 
+                2vw 37vh 1px 0px #F0FF03, 
+                7vw -40vh 1px 1px #fff, 
+                15vw 18vh 0px 0px #fff, 
+                25vw -13vh 1px 1px #581845, 
+                -46vw -12vh 1px 1px #581845, 
+                -18vw 22vh 0px 0px #F0FF03, 
+                23vw -9vh 1px 0px #F0FF03, 
+                50vw 12vh 0px 1px #fff, 
+                45vw 2vh 0px 0px #fff, 
+                45vw 2vh 0px 0px #FF0303, 
+                14vw -48vh 1px 0px #03FFFF, 
+                23vw 43vh 0px 1px #03FFFF, 
+                -40vw 16vh 1px 1px #1603FF, 
+                20vw -31vh 0px 1px #1603FF, 
+                -17vw 44vh 1px 1px #FF0303, 
+                18vw -45vh 0px 0px #FF0303, 
+                33vw -6vh 0px 0px #03FFFF, 
+                0vw 7vh 0px 1px #03FFFF, 
+                -10vw -18vh 0px 1px #1603FF, 
+                -19vw 5vh 1px 0px #1603FF, 
+                1vw 42vh 0px 0px #FF0303, 
+                22vw 48vh 0px 1px #FF0303, 
+                39vw -8vh 1px 1px #03FFFF, 
+                -6vw -42vh 1px 0px #03FFFF, 
+                -47vw 34vh 0px 0px #1603FF, 
+                -46vw 19vh 0px 1px #1603FF, 
+                -12vw -32vh 0px 0px #FF0303, 
+                -45vw -38vh 0px 1px #FF0303, 
+                -28vw 18vh 1px 0px #03FFFF, 
+                -38vw -46vh 1px 1px #03FFFF, 
+                49vw -6vh 1px 1px #1603FF, 
+                -28vw 18vh 1px 1px #1603FF, 
+                10vw -24vh 0px 1px #FF0303, 
+                -5vw -11vh 1px 1px #FF0303, 
+                33vw -8vh 1px 0px #03FFFF, 
+                -16vw 17vh 0px 0px #03FFFF, 
+                18vw 27vh 0px 1px #1603FF, 
+                -8vw -10vh 1px 1px #1603FF,
+                14vw -48vh 1px 0px #581845, 
+                23vw 43vh 0px 1px #581845, 
+                -40vw 16vh 1px 1px #F0FF03, 
+                20vw -31vh 0px 1px #F0FF03, 
+                -17vw 44vh 1px 1px #fff, 
+                18vw -45vh 0px 0px #fff, 
+                33vw -6vh 0px 0px #581845, 
+                0vw 7vh 0px 1px #581845, 
+                -10vw -18vh 0px 1px #F0FF03, 
+                -19vw 5vh 1px 0px #F0FF03, 
+                1vw 42vh 0px 0px #fff, 
+                22vw 48vh 0px 1px #fff, 
+                39vw -8vh 1px 1px #581845, 
+                -6vw -42vh 1px 0px #581845, 
+                -47vw 34vh 0px 0px #F0FF03, 
+                -46vw 19vh 0px 1px #F0FF03, 
+                -12vw -32vh 0px 0px #fff, 
+                -45vw -38vh 0px 1px #fff, 
+                -28vw 18vh 1px 0px #581845, 
+                -38vw -46vh 1px 1px #581845, 
+                49vw -6vh 1px 1px #F0FF03, 
+                -28vw 18vh 1px 1px #F0FF03, 
+                10vw -24vh 0px 1px #fff, 
+                -5vw -11vh 1px 1px #fff, 
+                33vw -8vh 1px 0px #581845, 
+                -16vw 17vh 0px 0px #581845, 
+                18vw 27vh 0px 1px #F0FF03, 
+                -8vw -10vh 1px 1px #F0FF03;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.5);
+    }
+    30% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 90px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    color: #4A7700;
+}
+
+.main-content {
+    margin-top: 20px;
+    color: #FFF;
+}	
+
+.main-content .card {
+	background: transparent;	
+	border: 2px solid #0a2642;
+	transition: transform 0.3s ease-in-out;
+	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);	
+}
+
+.card-footer {
+	position: relative;	
+}
+
+.card-footer .groups {
+    width: 100%;
+    border: none; 
+    border-radius: 0px;
+    background: transparent;
+}
+
+.card-footer .groups .btn {
+    background: transparent;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 2px 1px #0a2642;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    margin-right: 10px;
+}
+
+.main-content .card-header {
+    padding: 0; 
+    border: none;
+    border-radius: 0;
+}
+
+.card-header input {
+	background: rgba(255, 255, 255, 0.5);	
+	border: none;
+	color: red;
+}
+
+.card-header input:focus, .card-header input:visited {
+	box-shadow: none !important;
+}
+
+::placeholder {
+    color: #4A7700 !important;
+}
+
+.main-content .card-body {
+    position: relative;
+    padding: 0px;
+}
+
+.navbar-brand img {
+    height: 90px;
+}
+
+.games {
+    border-radius: 0px;
+    font-size: 13px;
+    height: 70px;
+    background: transparent;
+}
+
+.input-group .input-group-text {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: rgba(10, 38, 66, 0.5);
+    color: #FFF;
+    border-right: 2px solid #0a2642; 
+    border-radius: 0;
+}
+
+.input-group .input-group-text:last-child {
+    margin-right: 0;
+    border-right: 0px solid #FFF; 
+}
+
+.input-group .input-group-text:disabled {
+	background: rgba(255, 0, 0, 0.5);
+    color: #0a2642;	
+}
+
+.input-group .form-control {
+    border-radius: 0;
+}
+
+.container h3 {
+	text-shadow: 2px 1px #0a2642;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#satellite {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png'); 
+    background-size: cover;
+    top: 175px;
+    left: 275px;
+}
+
+.obstacle {
+    position: absolute;
+    background-size: cover;
+}
+
+#loadingMessage {
+    position: fixed;
+    left: 40%;
+    top: 10px;
+    width: auto;
+    padding: 15px;
+    z-index: 9991;
+    background: rgb(255, 255, 255, 0.8);
+    color: #0a2642;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);    
+    display: none;
+}
+
+.score {
+	position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
